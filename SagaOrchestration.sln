@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{534621AB-E28C-4D1B-BDE9-6E7BA86249B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{BFB472D9-54BE-4F2F-AA1B-44178F8B1720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\services\Shared\Shared.csproj", "{D85BC0F3-1BEE-44C3-9884-2558CEBC47E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "src\services\Stock.API\Stock.API.csproj", "{603442B9-547B-4B32-AD4C-3F3E4E682315}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "src\services\Payment.API\Payment.API.csproj", "{0A5BEFF4-C62F-43F5-B26C-BCE0DAF8E264}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaStateMachine.Service", "src\services\SagaStateMachine.Service\SagaStateMachine.Service.csproj", "{639A789E-0CE3-47CF-8710-D8AA06F83CF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "src\services\Order.API\Order.API.csproj", "{EE450933-8AF9-45D3-93E3-929712EE055B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D85BC0F3-1BEE-44C3-9884-2558CEBC47E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D85BC0F3-1BEE-44C3-9884-2558CEBC47E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D85BC0F3-1BEE-44C3-9884-2558CEBC47E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D85BC0F3-1BEE-44C3-9884-2558CEBC47E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{603442B9-547B-4B32-AD4C-3F3E4E682315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{603442B9-547B-4B32-AD4C-3F3E4E682315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{603442B9-547B-4B32-AD4C-3F3E4E682315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{603442B9-547B-4B32-AD4C-3F3E4E682315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5BEFF4-C62F-43F5-B26C-BCE0DAF8E264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5BEFF4-C62F-43F5-B26C-BCE0DAF8E264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5BEFF4-C62F-43F5-B26C-BCE0DAF8E264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5BEFF4-C62F-43F5-B26C-BCE0DAF8E264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639A789E-0CE3-47CF-8710-D8AA06F83CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639A789E-0CE3-47CF-8710-D8AA06F83CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639A789E-0CE3-47CF-8710-D8AA06F83CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639A789E-0CE3-47CF-8710-D8AA06F83CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE450933-8AF9-45D3-93E3-929712EE055B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE450933-8AF9-45D3-93E3-929712EE055B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE450933-8AF9-45D3-93E3-929712EE055B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE450933-8AF9-45D3-93E3-929712EE055B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFB472D9-54BE-4F2F-AA1B-44178F8B1720} = {534621AB-E28C-4D1B-BDE9-6E7BA86249B1}
+		{D85BC0F3-1BEE-44C3-9884-2558CEBC47E6} = {BFB472D9-54BE-4F2F-AA1B-44178F8B1720}
+		{603442B9-547B-4B32-AD4C-3F3E4E682315} = {BFB472D9-54BE-4F2F-AA1B-44178F8B1720}
+		{0A5BEFF4-C62F-43F5-B26C-BCE0DAF8E264} = {BFB472D9-54BE-4F2F-AA1B-44178F8B1720}
+		{639A789E-0CE3-47CF-8710-D8AA06F83CF8} = {BFB472D9-54BE-4F2F-AA1B-44178F8B1720}
+		{EE450933-8AF9-45D3-93E3-929712EE055B} = {BFB472D9-54BE-4F2F-AA1B-44178F8B1720}
+	EndGlobalSection
+EndGlobal
