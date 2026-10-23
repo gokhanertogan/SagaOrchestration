@@ -1,11 +1,11 @@
 # Saga Orchestration with MassTransit
 
-A .NET 8 sample that coordinates a distributed order workflow across Order, Stock and Payment services with an orchestration-based saga (MassTransit state machine, RabbitMQ, SQL Server, MongoDB).
+A .NET 10 sample that coordinates a distributed order workflow across Order, Stock and Payment services with an orchestration-based saga (MassTransit state machine, RabbitMQ, SQL Server, MongoDB).
 
-![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet)
-![MassTransit](https://img.shields.io/badge/MassTransit-8.2.5-1E88E5)
+![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet)
+![MassTransit](https://img.shields.io/badge/MassTransit-8.5-1E88E5)
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-broker-FF6600?logo=rabbitmq&logoColor=white)
-![SQL Server](https://img.shields.io/badge/SQL%20Server-EF%20Core%208-CC2927?logo=microsoftsqlserver&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-EF%20Core%2010-CC2927?logo=microsoftsqlserver&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-stock%20store-47A248?logo=mongodb&logoColor=white)
 
 ## Overview
@@ -89,16 +89,20 @@ sequenceDiagram
 
 ## Tech stack
 
-- .NET 8 (ASP.NET Core minimal APIs and a Worker Service)
-- MassTransit 8.2.5 with the RabbitMQ transport and the Entity Framework Core saga repository
-- Entity Framework Core 8 with SQL Server (orders and saga state)
-- MongoDB.Driver 2.29 (stock)
+- .NET 10 (ASP.NET Core minimal APIs and a Worker Service)
+- MassTransit 8.5 (Apache-2.0) with the RabbitMQ transport and the Entity Framework Core saga repository
+- Entity Framework Core 10 with SQL Server (orders and saga state)
+- MongoDB.Driver 3 (stock)
 - Swagger / Swashbuckle (enabled in the Development environment)
+- Central package management: TFM and shared build settings in `Directory.Build.props`, package versions in `Directory.Packages.props`
 
 ## Project structure
 
 ```text
 SagaOrchestration.sln
+Directory.Build.props                 # Target framework (net10.0) and shared build settings
+Directory.Packages.props              # Central NuGet package versions
+global.json                           # .NET 10 SDK
 docker-compose.yml                    # RabbitMQ, SQL Server, MongoDB for local development
 src/services/
 ├── Order.API/
@@ -127,7 +131,7 @@ src/services/
 
 ### Prerequisites
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download) or newer
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
 - Docker (for RabbitMQ, SQL Server and MongoDB)
 
 ### 1. Start the infrastructure
@@ -146,6 +150,8 @@ docker compose up -d
 These are **local development defaults only**. They match the `ConnectionStrings` and `MongoDB` sections in each service's `appsettings.json`. If you change them, update both places, or override them with environment variables such as `ConnectionStrings__ConnectionString`.
 
 > The SQL Server image is `linux/amd64`. On Apple Silicon it runs through Docker Desktop's Rosetta emulation.
+>
+> SQL Server needs about 20 to 30 seconds after `docker compose up` before it accepts logins. If `Order.API` or `SagaStateMachine.Service` exits on startup with a "pre-login handshake" error, wait a moment and start it again.
 
 ### 2. Run the services
 
@@ -207,4 +213,3 @@ This is a learning sample, not production code:
 - **Payment is simulated.** The only rule is `TotalPrice <= 100`.
 - **Failed saga instances are never finalized**, and there are no timeouts for participants that don't respond.
 - No authentication, input validation, health checks or automated tests.
-- `MongoDB.Driver` 2.29 pulls in transitive packages with published advisories (`SharpCompress`, `Snappier`). Fixing them requires moving to `MongoDB.Driver` 3.x.
