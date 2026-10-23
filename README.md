@@ -7,6 +7,7 @@ A .NET 10 sample that coordinates a distributed order workflow across Order, Sto
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-broker-FF6600?logo=rabbitmq&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-EF%20Core%2010-CC2927?logo=microsoftsqlserver&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-stock%20store-47A248?logo=mongodb&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## Overview
 
@@ -213,3 +214,7 @@ This is a learning sample, not production code:
 - **Payment is simulated.** The only rule is `TotalPrice <= 100`.
 - **Failed saga instances are never finalized**, and there are no timeouts for participants that don't respond.
 - No authentication, input validation, health checks or automated tests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
