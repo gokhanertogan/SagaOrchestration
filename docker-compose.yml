@@ -1,0 +1,24 @@
+# Local development infrastructure only (the .NET services run on the host).
+# Credentials below are local-dev defaults and match the services' appsettings.json.
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: saga-orchestration-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: saga-orchestration-sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Your_password123"
+    ports:
+      - "1433:1433"
+
+  mongodb:
+    image: mongo:7
+    container_name: saga-orchestration-mongodb
+    ports:
+      - "27017:27017"

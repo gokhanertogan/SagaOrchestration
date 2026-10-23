@@ -18,7 +18,7 @@ builder.Services.AddMassTransit(configure =>
 
     configure.UsingRabbitMq((context, configurator) =>
     {
-        configurator.Host(builder.Configuration["RabbitMQ"]);
+        configurator.Host(builder.Configuration.GetConnectionString("RabbitMQ"));
 
         configurator.ReceiveEndpoint(RabbitMQSettings.Order_OrderCompletedEventQueue,
                                      e => e.ConfigureConsumer<OrderCompletedEventConsumer>(context));
@@ -29,7 +29,14 @@ builder.Services.AddMassTransit(configure =>
 });
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString")));
+builder.Services.AddScoped<IOrderService, OrderService>();
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    scope.ServiceProvider.GetRequiredService<ApplicationDbContext>().Database.EnsureCreated();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

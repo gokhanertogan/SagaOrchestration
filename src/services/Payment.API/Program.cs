@@ -13,7 +13,7 @@ builder.Services.AddMassTransit(configure =>
 
     configure.UsingRabbitMq((context, configurator) =>
     {
-        configurator.Host(builder.Configuration["RabbitMQ"]);
+        configurator.Host(builder.Configuration.GetConnectionString("RabbitMQ"));
 
         configurator.ReceiveEndpoint(RabbitMQSettings.Payment_StartedEventQueue,
                                      e => e.ConfigureConsumer<PaymentStartedEventConsumer>(context));

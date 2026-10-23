@@ -15,7 +15,7 @@ public class OrderCreatedEventConsumer(MongoDbService mongoDbService, ISendEndpo
         IMongoCollection<Entities.Stock> collection = _mongoDbService.GetCollection<Entities.Stock>();
         bool allItemsInStock = await Task.WhenAll(context.Message.OrderItems!.Select(async orderItem =>
         {
-            return await collection.Find(s => s.ProductId == orderItem.ProductId && s.Count > orderItem.Count).AnyAsync();
+            return await collection.Find(s => s.ProductId == orderItem.ProductId && s.Count >= orderItem.Count).AnyAsync();
         })).ContinueWith(result => result.Result.All(r => r));
 
         ISendEndpoint sendEndpoint = await _sendEndpointProvider.GetSendEndpoint(new Uri($"queue:{RabbitMQSettings.StateMachine}"));

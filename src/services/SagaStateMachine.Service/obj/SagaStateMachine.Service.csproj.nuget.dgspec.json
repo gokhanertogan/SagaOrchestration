@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gokhanertogan/repos/SagaOrchestration/src/services/SagaStateMachine.Service/SagaStateMachine.Service.csproj": {}
+    "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/SagaStateMachine.Service/SagaStateMachine.Service.csproj": {}
   },
   "projects": {
-    "/Users/gokhanertogan/repos/SagaOrchestration/src/services/SagaStateMachine.Service/SagaStateMachine.Service.csproj": {
+    "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/SagaStateMachine.Service/SagaStateMachine.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gokhanertogan/repos/SagaOrchestration/src/services/SagaStateMachine.Service/SagaStateMachine.Service.csproj",
+        "projectUniqueName": "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/SagaStateMachine.Service/SagaStateMachine.Service.csproj",
         "projectName": "SagaStateMachine.Service",
-        "projectPath": "/Users/gokhanertogan/repos/SagaOrchestration/src/services/SagaStateMachine.Service/SagaStateMachine.Service.csproj",
+        "projectPath": "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/SagaStateMachine.Service/SagaStateMachine.Service.csproj",
         "packagesPath": "/Users/gokhanertogan/.nuget/packages/",
-        "outputPath": "/Users/gokhanertogan/repos/SagaOrchestration/src/services/SagaStateMachine.Service/obj/",
+        "outputPath": "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/SagaStateMachine.Service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/gokhanertogan/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/gokhanertogan/repos/SagaOrchestration/src/services/Shared/Shared.csproj": {
-                "projectPath": "/Users/gokhanertogan/repos/SagaOrchestration/src/services/Shared/Shared.csproj"
+              "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/Shared/Shared.csproj": {
+                "projectPath": "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/Shared/Shared.csproj"
               }
             }
           }
@@ -41,7 +41,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -50,10 +51,6 @@
             "MassTransit": {
               "target": "Package",
               "version": "[8.2.5, )"
-            },
-            "MassTransit.AspNetCore": {
-              "target": "Package",
-              "version": "[7.3.1, )"
             },
             "MassTransit.EntityFrameworkCore": {
               "target": "Package",
@@ -65,17 +62,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.32, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.32, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.1, )"
             }
           },
           "imports": [
@@ -89,23 +86,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/gokhanertogan/repos/SagaOrchestration/src/services/Shared/Shared.csproj": {
+    "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/Shared/Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gokhanertogan/repos/SagaOrchestration/src/services/Shared/Shared.csproj",
+        "projectUniqueName": "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/Shared/Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "/Users/gokhanertogan/repos/SagaOrchestration/src/services/Shared/Shared.csproj",
+        "projectPath": "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/Shared/Shared.csproj",
         "packagesPath": "/Users/gokhanertogan/.nuget/packages/",
-        "outputPath": "/Users/gokhanertogan/repos/SagaOrchestration/src/services/Shared/obj/",
+        "outputPath": "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/gokhanertogan/.nuget/NuGet/NuGet.Config"
@@ -131,7 +142,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -139,7 +151,7 @@
           "dependencies": {
             "MassTransit": {
               "target": "Package",
-              "version": "[8.1.2, )"
+              "version": "[8.2.5, )"
             }
           },
           "imports": [
@@ -153,12 +165,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

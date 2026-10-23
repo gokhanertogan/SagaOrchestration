@@ -1,16 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "V7ySSoXSfLc=",
+  "dgSpecHash": "J/5AoKrpfeU=",
   "success": true,
-  "projectFilePath": "/Users/gokhanertogan/repos/SagaOrchestration/src/services/Stock.API/Stock.API.csproj",
+  "projectFilePath": "/Users/gokhanertogan/repos/_profile-cleanup/SagaOrchestration/src/services/Stock.API/Stock.API.csproj",
   "expectedPackageFiles": [
     "/Users/gokhanertogan/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/Users/gokhanertogan/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "/Users/gokhanertogan/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
     "/Users/gokhanertogan/.nuget/packages/masstransit/8.2.5/masstransit.8.2.5.nupkg.sha512",
     "/Users/gokhanertogan/.nuget/packages/masstransit.abstractions/8.2.5/masstransit.abstractions.8.2.5.nupkg.sha512",
-    "/Users/gokhanertogan/.nuget/packages/masstransit.aspnetcore/7.3.1/masstransit.aspnetcore.7.3.1.nupkg.sha512",
-    "/Users/gokhanertogan/.nuget/packages/masstransit.extensions.dependencyinjection/7.3.1/masstransit.extensions.dependencyinjection.7.3.1.nupkg.sha512",
     "/Users/gokhanertogan/.nuget/packages/masstransit.rabbitmq/8.2.5/masstransit.rabbitmq.8.2.5.nupkg.sha512",
     "/Users/gokhanertogan/.nuget/packages/microsoft.aspnetcore.openapi/8.0.8/microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",
     "/Users/gokhanertogan/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -45,7 +43,10 @@
     "/Users/gokhanertogan/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
     "/Users/gokhanertogan/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
     "/Users/gokhanertogan/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512",
-    "/Users/gokhanertogan/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512"
+    "/Users/gokhanertogan/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512",
+    "/Users/gokhanertogan/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/Users/gokhanertogan/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "/Users/gokhanertogan/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.22/microsoft.netcore.app.host.osx-arm64.8.0.22.nupkg.sha512"
   ],
   "logs": []
 }

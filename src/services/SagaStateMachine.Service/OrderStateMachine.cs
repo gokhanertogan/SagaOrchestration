@@ -35,10 +35,6 @@ public class OrderStateMachine : MassTransitStateMachine<OrderStateInstance>
           orderStateInstance =>
           orderStateInstance.CorrelateById(@event => @event.Message.CorrelationId));
 
-        Event(() => StockNotReservedEvent,
-            orderStateInstance =>
-            orderStateInstance.CorrelateById(@event => @event.Message.CorrelationId));
-
         Event(() => PaymentCompletedEvent,
             orderStateInstance =>
             orderStateInstance.CorrelateById(@event => @event.Message.CorrelationId));
